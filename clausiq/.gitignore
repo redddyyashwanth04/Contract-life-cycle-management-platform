@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+data/clausiq.db
+data/clausiq.db-wal
+data/clausiq.db-shm
+server.log
+server.err
+.uv-cache/
+.uv-python/

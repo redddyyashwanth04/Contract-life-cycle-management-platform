@@ -1,0 +1,93 @@
+id: balanced
+name: "Balanced Playbook"
+organization: "Neutral / Joint Venture"
+description: "A middle-ground playbook useful for partnership agreements: mutual obligations, symmetric caps and industry-standard notice periods."
+rules:
+  - id: LC-1
+    name: "Mutual liability cap"
+    clause_type: "Liability Cap"
+    severity: warning
+    statement: "Mutual liability capped at 12 months of fees."
+    forbidden_patterns:
+      - "uncapped"
+      - "unlimited"
+    required_patterns:
+      - "liability"
+    preferred_patterns:
+      - "12 months"
+      - "mutual"
+    ambiguous_patterns:
+      - "cap"
+    suggested_language: "Each party's aggregate liability under this Agreement shall not exceed the fees paid in the twelve (12) months preceding the claim."
+    redline_notes: "Use a mutual 12-month cap."
+  - id: TERM-1
+    name: "Termination notice"
+    clause_type: "Termination"
+    severity: info
+    statement: "30 days' notice for convenience termination."
+    forbidden_patterns:
+      - "immediately"
+    required_patterns:
+      - "notice"
+    preferred_patterns:
+      - "thirty (30)"
+    ambiguous_patterns:
+      - "reasonable"
+    suggested_language: "Either party may terminate upon thirty (30) days' written notice."
+    redline_notes: "Standardize on 30 days."
+  - id: IND-1
+    name: "Mutual indemnification"
+    clause_type: "Indemnification"
+    severity: warning
+    statement: "Mutual indemnification for third-party IP and negligence claims."
+    forbidden_patterns:
+      - "uncapped"
+    required_patterns:
+      - "indemnif"
+    preferred_patterns:
+      - "mutual"
+    ambiguous_patterns: []
+    suggested_language: "The parties shall mutually indemnify each other against third-party claims arising from negligence, willful misconduct or intellectual property infringement."
+    redline_notes: "Make indemnification mutual and third-party scoped."
+  - id: IP-1
+    name: "Purpose-limited license"
+    clause_type: "IP Ownership"
+    severity: info
+    statement: "Licenses limited to the purpose of the engagement."
+    forbidden_patterns:
+      - "perpetual"
+    required_patterns:
+      - "license"
+    preferred_patterns:
+      - "necessary"
+    ambiguous_patterns: []
+    suggested_language: "Each party grants the other a limited license to use its materials solely as necessary for the purpose of this Agreement."
+    redline_notes: "Limit licenses to the purpose of the engagement."
+  - id: CONF-1
+    name: "Confidentiality"
+    clause_type: "Confidentiality"
+    severity: info
+    statement: "Confidentiality survives 2 years."
+    forbidden_patterns: []
+    required_patterns:
+      - "confidential"
+    preferred_patterns:
+      - "two (2) years"
+    ambiguous_patterns: []
+    suggested_language: "Confidentiality obligations survive for two (2) years following termination."
+    redline_notes: "Use a 2-year survival period."
+  - id: DP-1
+    name: "Data protection"
+    clause_type: "Data Protection"
+    severity: warning
+    statement: "Reasonable security and applicable-law compliance."
+    forbidden_patterns:
+      - "assumes no responsibility"
+    required_patterns:
+      - "data"
+    preferred_patterns:
+      - "reasonable"
+      - "encrypt"
+    ambiguous_patterns: []
+    suggested_language: "Each party shall use reasonable security measures, including encryption, and comply with applicable data protection law."
+    redline_notes: "Require reasonable security and compliance."

@@ -1,0 +1,178 @@
+id: startup-friendly
+name: "Startup-Friendly Playbook"
+organization: "Nimbus Labs (Customer)"
+description: "Conservative customer-side playbook. Prioritizes capped liability, long notice periods, narrow IP grants and strong data-protection commitments."
+rules:
+  - id: LC-1
+    name: "Capped aggregate liability"
+    clause_type: "Liability Cap"
+    severity: critical
+    statement: "Aggregate liability must be capped at no more than fees paid in the 12 months preceding the claim."
+    forbidden_patterns:
+      - "uncapped"
+      - "unlimited"
+      - "without limitation"
+      - "entire fees paid"
+      - "no event"
+    required_patterns:
+      - "liability"
+    preferred_patterns:
+      - "12 months"
+      - "twelve (12)"
+    ambiguous_patterns:
+      - "cap"
+      - "maximum liability"
+    suggested_language: "Neither party's aggregate liability under this Agreement, whether in contract, tort or otherwise, shall exceed the total fees paid by Customer to Provider in the twelve (12) months preceding the event giving rise to the claim. This cap shall not apply to either party's liability for gross negligence, willful misconduct, or breach of confidentiality."
+    redline_notes: "Insert a 12-month fee cap with a mutual carve-out for gross negligence, willful misconduct and confidentiality breaches."
+  - id: TERM-1
+    name: "Minimum termination notice"
+    clause_type: "Termination"
+    severity: warning
+    statement: "Either party must give at least 30 days' written notice for convenience termination."
+    forbidden_patterns:
+      - "seven (7) days"
+      - "7 days"
+      - "immediately"
+    required_patterns:
+      - "notice"
+    preferred_patterns:
+      - "thirty (30)"
+      - "30 days"
+      - "60 days"
+    ambiguous_patterns:
+      - "reasonable"
+    suggested_language: "Either party may terminate this Agreement for convenience upon thirty (30) days' prior written notice to the other party. Termination for material breach shall follow a ten (10) day cure period."
+    redline_notes: "Raise the convenience-termination notice to at least 30 days and add a cure period for material breach."
+  - id: IND-1
+    name: "Indemnification capped to fees paid"
+    clause_type: "Indemnification"
+    severity: critical
+    statement: "Mutual indemnification obligations must be capped at fees paid in the preceding 12 months."
+    forbidden_patterns:
+      - "uncapped"
+      - "unlimited"
+      - "any and all"
+    required_patterns:
+      - "indemnif"
+    preferred_patterns:
+      - "mutual"
+      - "cap"
+      - "fees paid"
+    ambiguous_patterns:
+      - "reasonable"
+    suggested_language: "Each party shall indemnify the other against third-party claims arising from its own gross negligence, willful misconduct or infringement of intellectual property rights, provided that each party's aggregate indemnification obligation shall not exceed the fees paid in the twelve (12) months preceding the claim."
+    redline_notes: "Make indemnification mutual and cap each party's aggregate obligation at 12 months of fees."
+  - id: IP-1
+    name: "Narrow IP license"
+    clause_type: "IP Ownership"
+    severity: warning
+    statement: "No broad or perpetual license over Customer data or IP; licenses are limited to what is necessary to provide the services."
+    forbidden_patterns:
+      - "perpetual"
+      - "irrevocable"
+      - "royalty-free, worldwide"
+      - "sell"
+      - "commercialize"
+    required_patterns:
+      - "license"
+    preferred_patterns:
+      - "solely to provide"
+      - "necessary to provide"
+      - "does not transfer"
+    ambiguous_patterns:
+      - "use"
+    suggested_language: "Provider is granted a limited, revocable, non-exclusive, non-transferable license to use Customer Data solely as necessary to provide the Services under this Agreement. No right, title or interest in Customer Data or Customer's intellectual property is transferred, and Provider shall not use Customer Data to train models or for any purpose other than service delivery."
+    redline_notes: "Narrow the license to service delivery only, prohibit model training on customer data, and confirm no IP transfer occurs."
+  - id: CONF-1
+    name: "Confidentiality survival period"
+    clause_type: "Confidentiality"
+    severity: warning
+    statement: "Confidentiality obligations must survive at least 3 years after termination."
+    forbidden_patterns:
+      - "one (1) year"
+      - "1 year"
+      - "twelve (12) months"
+    required_patterns:
+      - "confidential"
+    preferred_patterns:
+      - "three (3) years"
+      - "3 years"
+      - "five (5) years"
+    ambiguous_patterns:
+      - "surviv"
+    suggested_language: "The obligations of confidentiality and non-use under this Section shall survive termination or expiration of this Agreement for a period of three (3) years, and indefinitely with respect to trade secrets."
+    redline_notes: "Extend confidentiality survival to at least 3 years, with indefinite protection for trade secrets."
+  - id: RENEWAL-1
+    name: "Bounded auto-renewal"
+    clause_type: "Renewal"
+    severity: warning
+    statement: "Auto-renewal terms are limited to 12 months and require written notice at least 60 days before renewal."
+    forbidden_patterns:
+      - "twenty-four (24) month"
+      - "24 month"
+      - "five (5) year"
+    required_patterns:
+      - "renew"
+    preferred_patterns:
+      - "twelve (12) month"
+      - "60 days"
+      - "sixty (60) days"
+    ambiguous_patterns:
+      - "automatic"
+    suggested_language: "This Agreement shall automatically renew for successive twelve (12) month terms unless either party provides written notice of non-renewal at least sixty (60) days before the end of the then-current term."
+    redline_notes: "Reduce the auto-renewal term to 12 months and require 60 days' advance written notice of non-renewal."
+  - id: DP-1
+    name: "Data protection commitments"
+    clause_type: "Data Protection"
+    severity: critical
+    statement: "Provider must commit to SOC 2 controls and GDPR-compliant processing with a written data processing agreement."
+    forbidden_patterns:
+      - "provider assumes no responsibility"
+      - "vendor assumes no responsibility"
+      - "assumes no responsibility"
+      - "not responsible for any loss of data"
+      - "sole responsibility"
+      - "solely responsible"
+    required_patterns:
+      - "data"
+    preferred_patterns:
+      - "soc 2"
+      - "gdpr"
+      - "processing agreement"
+      - "encrypt"
+    ambiguous_patterns:
+      - "reasonable"
+    suggested_language: "Provider shall maintain SOC 2 Type II controls, process personal data in compliance with the GDPR and applicable laws, encrypt data in transit and at rest, and execute a data processing agreement with Customer before processing any personal data. Customer Data shall not be shared with third parties except subprocessors under a compliant DPA."
+    redline_notes: "Add SOC 2 / GDPR commitments, encryption requirements and a mandatory data processing agreement."
+  - id: GL-1
+    name: "Governing law and venue"
+    clause_type: "Governing Law"
+    severity: info
+    statement: "Agreement is governed by the laws of the State of Delaware with venue in New Castle County."
+    forbidden_patterns: []
+    required_patterns:
+      - "govern"
+    preferred_patterns:
+      - "delaware"
+    ambiguous_patterns: []
+    suggested_language: "This Agreement shall be governed by and construed in accordance with the laws of the State of Delaware, without regard to conflict-of-law principles. The parties consent to the exclusive jurisdiction of the state and federal courts located in New Castle County, Delaware."
+    redline_notes: "Standardize governing law to Delaware for predictability across vendors."
+  - id: PAY-1
+    name: "Payment terms"
+    clause_type: "Payment Terms"
+    severity: info
+    statement: "Invoices are payable net 30 and disputes must not suspend service."
+    forbidden_patterns:
+      - "upon execution"
+      - "advance payment of the full term"
+    required_patterns:
+      - "fee"
+      - "pay"
+    preferred_patterns:
+      - "net 30"
+      - "thirty (30) days"
+      - "net thirty"
+    ambiguous_patterns:
+      - "due"
+    suggested_language: "Provider shall invoice Customer monthly in arrears. Invoices are due and payable net thirty (30) days from receipt. Disputed amounts shall not suspend delivery of the Services provided the undisputed amounts are paid when due."
+    redline_notes: "Move to monthly invoicing net 30 and ensure disputed amounts do not suspend service."

@@ -1,0 +1,21 @@
+MUTUAL NON-DISCLOSURE AGREEMENT
+
+This Mutual Non-Disclosure Agreement ("Agreement") is entered into by and between Nimbus Labs ("Disclosing Party") and Atlas Analytics ("Receiving Party").
+
+1. CONFIDENTIAL INFORMATION
+"Confidential Information" means all non-public information disclosed by either party in connection with the parties' discussions regarding a potential business relationship, including technical data, business plans, customer lists and financial information.
+
+2. OBLIGATIONS
+Each party shall hold the other party's Confidential Information in strict confidence and shall use it only for the purpose of evaluating the potential business relationship. Each party shall use at least the same degree of care it uses to protect its own confidential information, but in no event less than reasonable care.
+
+3. EXCLUSIONS
+Confidential Information does not include information that is or becomes publicly known through no fault of the Receiving Party, is independently developed, or is rightfully received from a third party without restriction.
+
+4. TERM
+This Agreement shall remain in effect for ten (10) years from the effective date. The confidentiality obligations shall survive termination of this Agreement for a period of two (2) years.
+
+5. NO LICENSE
+Nothing in this Agreement grants either party any license or right in the other party's intellectual property.
+
+6. GOVERNING LAW
+This Agreement shall be governed by the laws of the State of California without regard to its conflict of law principles.

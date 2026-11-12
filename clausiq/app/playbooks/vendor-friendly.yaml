@@ -1,0 +1,151 @@
+id: vendor-friendly
+name: "Vendor-Friendly Playbook"
+organization: "CloudBase (Provider)"
+description: "Provider-side playbook used by the counterparty negotiation agent. Prefers higher liability caps, shorter notice periods and license breadth needed to operate the service."
+rules:
+  - id: LC-1
+    name: "Liability cap with headroom"
+    clause_type: "Liability Cap"
+    severity: warning
+    statement: "Aggregate liability capped at 24 months of fees is acceptable; a cap must exist."
+    forbidden_patterns:
+      - "uncapped"
+      - "unlimited"
+    required_patterns:
+      - "liability"
+      - "cap"
+    preferred_patterns:
+      - "twenty-four (24) months"
+      - "24 months"
+      - "contract value"
+    ambiguous_patterns:
+      - "greater of"
+    suggested_language: "Provider's aggregate liability under this Agreement shall not exceed the fees paid or payable by Customer during the twenty-four (24) months preceding the claim."
+    redline_notes: "Accept any explicit cap; prefer 24 months of fees or contract value."
+  - id: TERM-1
+    name: "Termination notice"
+    clause_type: "Termination"
+    severity: info
+    statement: "Convenience termination requires at least 15 days' notice."
+    forbidden_patterns:
+      - "immediately"
+    required_patterns:
+      - "notice"
+    preferred_patterns:
+      - "thirty (30)"
+      - "30 days"
+    ambiguous_patterns:
+      - "reasonable"
+    suggested_language: "Either party may terminate this Agreement for convenience upon thirty (30) days' prior written notice."
+    redline_notes: "Accept notice periods of 15–60 days."
+  - id: IND-1
+    name: "Indemnification with cap"
+    clause_type: "Indemnification"
+    severity: warning
+    statement: "Indemnification must be capped (2x fees is preferred) and limited to third-party claims."
+    forbidden_patterns:
+      - "uncapped"
+      - "unlimited"
+    required_patterns:
+      - "indemnif"
+      - "cap"
+    preferred_patterns:
+      - "two (2) times"
+      - "2x"
+      - "third-party"
+    ambiguous_patterns:
+      - "reasonable"
+    suggested_language: "Each party shall indemnify the other only for third-party claims arising from the indemnifying party's gross negligence, willful misconduct or intellectual property infringement, with each party's aggregate indemnification obligation capped at two (2) times the fees paid in the twelve (12) months preceding the claim."
+    redline_notes: "Cap indemnification at 2x trailing fees and limit it to third-party claims."
+  - id: IP-1
+    name: "License to operate the service"
+    clause_type: "IP Ownership"
+    severity: warning
+    statement: "Provider needs a license to host, process and display Customer Data to deliver the service."
+    forbidden_patterns: []
+    required_patterns:
+      - "license"
+    preferred_patterns:
+      - "provide the services"
+      - "host"
+      - "process"
+    ambiguous_patterns:
+      - "use"
+    suggested_language: "Customer grants Provider a limited, non-exclusive license to host, store, process and display Customer Data solely as necessary to provide the Services under this Agreement."
+    redline_notes: "Require a license sufficient to host, process and display customer data for service delivery."
+  - id: CONF-1
+    name: "Confidentiality survival"
+    clause_type: "Confidentiality"
+    severity: info
+    statement: "Confidentiality survives at least 1 year after termination."
+    forbidden_patterns: []
+    required_patterns:
+      - "confidential"
+    preferred_patterns:
+      - "two (2) years"
+      - "three (3) years"
+    ambiguous_patterns:
+      - "surviv"
+    suggested_language: "Confidentiality obligations shall survive termination for two (2) years and indefinitely for trade secrets."
+    redline_notes: "Accept survival periods between 1 and 3 years."
+  - id: RENEWAL-1
+    name: "Renewal mechanics"
+    clause_type: "Renewal"
+    severity: info
+    statement: "Auto-renewal up to 24 months is acceptable."
+    forbidden_patterns: []
+    required_patterns:
+      - "renew"
+    preferred_patterns:
+      - "twelve (12)"
+      - "twenty-four (24)"
+    ambiguous_patterns:
+      - "automatic"
+    suggested_language: "This Agreement renews automatically for successive twelve (12) month terms unless either party gives written notice of non-renewal at least thirty (30) days before the end of the then-current term."
+    redline_notes: "Accept renewal terms of 12–24 months."
+  - id: DP-1
+    name: "Data protection"
+    clause_type: "Data Protection"
+    severity: warning
+    statement: "Provider uses commercially reasonable security controls and complies with applicable law."
+    forbidden_patterns:
+      - "assumes no responsibility"
+      - "solely responsible"
+    required_patterns:
+      - "data"
+    preferred_patterns:
+      - "commercially reasonable"
+      - "encrypt"
+    ambiguous_patterns:
+      - "reasonable"
+    suggested_language: "Provider shall maintain commercially reasonable administrative, technical and physical safeguards, including encryption in transit and at rest, and shall comply with applicable data protection law."
+    redline_notes: "Prefer 'commercially reasonable' security language over enumerated certifications."
+  - id: GL-1
+    name: "Governing law"
+    clause_type: "Governing Law"
+    severity: info
+    statement: "Neutral governing law acceptable; provider HQ state preferred."
+    forbidden_patterns: []
+    required_patterns:
+      - "govern"
+    preferred_patterns: []
+    ambiguous_patterns: []
+    suggested_language: "This Agreement shall be governed by the laws of the State of Washington."
+    redline_notes: "Accept any US state as governing law."
+  - id: PAY-1
+    name: "Payment terms"
+    clause_type: "Payment Terms"
+    severity: info
+    statement: "Net 15 preferred; net 30 acceptable."
+    forbidden_patterns:
+      - "net 60"
+      - "ninety (90) days"
+    required_patterns:
+      - "fee"
+    preferred_patterns:
+      - "net 15"
+      - "net 30"
+    ambiguous_patterns:
+      - "due"
+    suggested_language: "Invoices are due and payable net fifteen (15) days from receipt."
+    redline_notes: "Prefer net 15; accept net 30."

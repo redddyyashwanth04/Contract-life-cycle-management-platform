@@ -1,0 +1,33 @@
+MASTER SERVICES AGREEMENT
+
+This Master Services Agreement ("Agreement") is entered into by and between CloudBase Inc. ("Provider") and Nimbus Labs ("Customer"), effective as of the date of last signature below.
+
+1. SERVICES
+Provider shall provide Customer with cloud storage and data hosting services (the "Services") as described in the applicable order form. Provider shall use commercially reasonable efforts to maintain 99.5% uptime for the Services.
+
+2. FEES AND PAYMENT
+Customer shall pay Provider the fees set forth in the order form. Payment is due upon execution of the Agreement, and all fees are non-refundable. Customer shall pay interest on late payments at 1.5% per month.
+
+3. TERM AND RENEWAL
+This Agreement has an initial term of twenty-four (24) months and shall automatically renew for additional successive twenty-four (24) month terms unless Customer provides written notice at least ninety (90) days before the end of the then-current term.
+
+4. TERMINATION
+Provider may terminate this Agreement for convenience upon seven (7) days' written notice. Customer may terminate only for Provider's uncured material breach. Upon termination, Customer shall pay all fees for the remainder of the then-current term.
+
+5. LIMITATION OF LIABILITY
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, PROVIDER'S AGGREGATE LIABILITY ARISING OUT OF OR RELATED TO THIS AGREEMENT IS UNCAPPED, AND PROVIDER SHALL BE LIABLE WITHOUT LIMITATION FOR ANY DAMAGES, INCLUDING DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR PUNITIVE DAMAGES. PROVIDER DISCLAIMS ALL LIABILITY FOR ANY LOSS OF DATA.
+
+6. INDEMNIFICATION
+Customer shall indemnify, defend and hold harmless Provider against any and all third-party claims, losses and damages arising out of or related to Customer's use of the Services, without limitation. Provider's obligations to indemnify Customer are excluded to the maximum extent permitted by law.
+
+7. INTELLECTUAL PROPERTY
+Customer grants Provider a perpetual, irrevocable, royalty-free, worldwide license to use, reproduce, modify, create derivative works of, distribute and sell all Customer Data and Customer content uploaded to the Services, for any commercial purpose whatsoever.
+
+8. CONFIDENTIALITY
+Each party shall protect the other party's confidential information using reasonable care. Confidentiality obligations shall survive termination of this Agreement for a period of two (2) years.
+
+9. DATA PROTECTION
+Customer is solely responsible for the security and backup of all Customer Data. Provider assumes no responsibility for the security, integrity or confidentiality of Customer Data, and Provider shall not be liable for any loss, corruption or unauthorized access to Customer Data.
+
+10. GOVERNING LAW
+This Agreement shall be governed by the laws of the State of Washington, and the parties consent to the exclusive jurisdiction of the courts located in King County, Washington.
